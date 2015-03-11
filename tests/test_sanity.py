@@ -567,6 +567,7 @@ fi
     assert 'Available ports:' in out, out
     assert 'SDL2' in out, out
     assert 'SDL2_image' in out, out
+    assert 'SDL2_net' in out, out
 
     # using ports
 
@@ -725,6 +726,7 @@ fi
       ([PYTHON, 'embuilder.py', 'build', 'zlib'], ['building and verifying zlib', 'success'], True, [os.path.join('ports-builds', 'zlib', 'libz.a')]),
       ([PYTHON, 'embuilder.py', 'build', 'sdl2'], ['success'], True, [os.path.join('ports-builds', 'sdl2', 'libsdl2.bc')]),
       ([PYTHON, 'embuilder.py', 'build', 'sdl2-image'], ['success'], True, [os.path.join('ports-builds', 'sdl2-image', 'libsdl2_image.bc')]),
+      ([PYTHON, 'embuilder.py', 'build', 'sdl2-net'], ['success'], True, [os.path.join('ports-builds', 'sdl2-net', 'libsdl2_net.bc')]),
     ]:
       print command
       Cache.erase()
