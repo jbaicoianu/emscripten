@@ -115,6 +115,10 @@ if operation == 'build':
       build('''
         int main() {}
       ''', [os.path.join('ports-builds', 'sdl2-image', 'libsdl2_image.bc')], ['-s', 'USE_SDL=2', '-s', 'USE_SDL_IMAGE=2'])
+    elif what == 'sdl2-net':
+      build('''
+        int main() {}
+      ''', [os.path.join('ports-builds', 'sdl2-net', 'libsdl2_net.bc')], ['-s', 'USE_SDL=2', '-s', 'USE_SDL_NET=2'])
     else:
       shared.logging.error('unfamiliar build target: ' + what)
       sys.exit(1)
